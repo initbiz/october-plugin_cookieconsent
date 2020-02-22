@@ -1,5 +1,6 @@
 <?php namespace NSRosenqvist\CookieConsent;
 
+use Lang;
 use Block;
 use NSRosenqvist\CookieConsent\Models\Settings;
 
@@ -53,10 +54,10 @@ class Plugin extends \System\Classes\PluginBase
     {
         return [
             "content" => [
-                "message" => Settings::get('message'),
-                "dismiss" => Settings::get('dismiss'),
-                "link"    => Settings::get('learnMore'),
-                "href"    => Settings::get('link', null),
+                "message" => Lang::get(Settings::get('message')),
+                "dismiss" => Lang::get(Settings::get('dismiss')),
+                "link"    => Lang::get(Settings::get('learnMore')),
+                "href"    => Lang::get(Settings::get('link', null)),
             ],
             "palette" => [
                 "popup" => [
